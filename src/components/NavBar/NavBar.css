@@ -1,0 +1,20 @@
+
+.logo-container {
+    float: left;
+    width: 130px;
+}
+.logo-container img {
+    width: 100%;
+}
+header > div {
+    background: bisque;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content:space-between;
+}
+
+.nav-buttons {
+    list-style: none;
+    color: rgb(70, 67, 67);
+    display: flex;
+}
