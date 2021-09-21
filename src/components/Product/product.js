@@ -1,14 +1,19 @@
 import React from "react";
+import itemCount from "../ItemCount/itemCount";
+
 
 const Product = (props) => {
     return(
         <><div className="container-prod">
             <img src="" alt="" />
         </div>
-        <h3>Sabor</h3>
-        <p>$190</p>
+        <h3>Sabor: {props.flavor}</h3>
+        <p>${props.price}</p>
         <label>Cantidad</label>
         <input type="number"></input>
+        <div>
+            <itemCount/>
+        </div>
         <button>comprar</button></>
     )
 }

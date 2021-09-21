@@ -1,10 +1,13 @@
 import "./NavBar.css";
-import logo from "c:/Users/AleS/Desktop/Curso fullstack/React/Proyecto/sweet/src/img/logoSS2.png";
+import logo from "../../img/logoSS2.png";
 //External components
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
+import { faShoppingCart } from "@fortawesome/free-solid-svg-icons"
+//import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
 const NavBar =()=>{
@@ -15,7 +18,7 @@ return(
         <Toolbar>
             <Typography variant="h6">
                 <div className="logo-container">
-                    <img src={logo} className="logo-app" alt="logo Sweet" />
+                    <img src={logo}/>
                 </div>
             </Typography>
             <div className="buttons-div">
@@ -26,7 +29,14 @@ return(
                     <li><Button color="inherit">Contacto</Button></li>
                 </ul>
             </div>
+            <div className="shopping-cartNav">
+                <Button variant="contained">
+                    <FontAwesomeIcon icon={faShoppingCart}/>
+                </Button>
+                <p><itemCount/></p>
+            </div>
         </Toolbar>
+
     </AppBar>
 );
 }
