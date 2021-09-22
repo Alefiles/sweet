@@ -1,0 +1,11 @@
+.listContainer {
+    display: flex;
+    height: 500px;
+    width: 500px;
+    margin-top: 10px;
+    background: rgb(243, 220, 239);
+}
+.listContainer>h1 {
+    font-weight: bold;
+    
+    }

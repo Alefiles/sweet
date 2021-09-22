@@ -1,5 +1,5 @@
 import React from "react";
-import itemCount from "../ItemCount/itemCount";
+import ItemCount from "../ItemCount/ItemCount";
 
 
 const Product = (props) => {

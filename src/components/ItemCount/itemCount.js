@@ -1,5 +1,5 @@
 /*import React, {useState} from "react";
-import Product from "../Product/product"
+import Product from "../Product/Product";
 
 export default function itemCount(props){
     const [items, setItems] = useState(0)
