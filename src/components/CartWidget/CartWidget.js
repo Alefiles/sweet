@@ -10,7 +10,7 @@ return(
                 <Button variant="contained">
                     <FontAwesomeIcon icon={faShoppingCart}/>
                 </Button>
-                <p><itemCount/></p>
+
 </div>
 )};
 export default CartWidget;
