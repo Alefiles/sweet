@@ -1,0 +1,15 @@
+.container-prod {
+    background-color: bisque; 
+    width: 20vw;
+    height: 50vh;
+    margin: 1vh;
+    border-radius: 10%;
+    box-shadow: grey;
+}
+.prod-img {
+    width: 15vw;
+    height: 25vh;
+}
+.product-info{
+    margin: 2vh;
+}

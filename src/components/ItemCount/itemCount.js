@@ -1,28 +1,31 @@
 import React, {useState} from "react";
+import Button from '@material-ui/core/Button';
 //import Product from "../Product/Product";
 
 export default function ItemCount(props){
     const [items, setItems] = useState(1)
-    const [stock, setStock] = useState(24)
-    const [nostock, disableButton] = useState (false)
-    
+    const {stock, buy} = props ;
+        
     const onAdd = () => {
         if (items < stock){
-        setItems (items +1)
-    } else{
-        disableButton(true)
-    }
+        setItems (items +1);
+    } 
 }
     const delItem = () => {
-        setItems (items -1)
+        if (items !== 0){
+            setItems (items -1)
+        }
     }
 
     return(
+        <div>
         <div className="CuentaItems">
-            <button onClick ={delItem}>-</button>
+            <button disabled= {items===0} onClick ={delItem}>-</button>
                 {items}
-            <button disabled={nostock} onClick={onAdd}>+</button>
+            <button disabled={items >= stock} onClick={onAdd}>+</button>
             
+        </div>
+        <Button onClick ={() => buy ()} >comprar</Button>
         </div>
     )
 }
