@@ -18,7 +18,7 @@ export default function ItemCount(props){
     }
 
     return(
-        <div className="cuentaItems">
+        <div className="CuentaItems">
             <button onClick ={delItem}>-</button>
                 {items}
             <button disabled={nostock} onClick={onAdd}>+</button>
