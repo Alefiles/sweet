@@ -1,9 +1,9 @@
 import React from "react";
-import "./Product.css";
+import "./Item.css";
 import ItemCount from "../ItemCount/ItemCount";
 
 
-const Product = (props) => {
+const Item = (props) => {
 const {imgProd, flavor, price, stock} = props
 const buy = () => {alert("Vas a agregar items al carrito")};
     return(
@@ -20,4 +20,4 @@ const buy = () => {alert("Vas a agregar items al carrito")};
         </div>
     )
 };
-export default Product;
+export default Item;

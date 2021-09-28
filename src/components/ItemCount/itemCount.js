@@ -13,7 +13,7 @@ export default function ItemCount(props){
 }
     const delItem = () => {
         if (items !== 0){
-            setItems (items -1)
+            setItems (items -1);
         }
     }
 
@@ -25,7 +25,7 @@ export default function ItemCount(props){
             <button disabled={items >= stock} onClick={onAdd}>+</button>
             
         </div>
-        <Button onClick ={() => buy ()} >comprar</Button>
+        <Button onClick ={() => buy ()} >Agregar</Button>
         </div>
     )
 }

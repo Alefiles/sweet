@@ -1,8 +1,7 @@
 import './App.css';
 //import React, {useState, useEffect} from "react"
 //Components
-import NavBar from "./components/NavBar/NavBar";
-import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import AppRouter from './AppRouter/AppRouter';
 //import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 
 
@@ -10,8 +9,8 @@ import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 function App() {
   return (
     <div className="App">
-      <NavBar/>
-      <ItemListContainer greeting="Aloha!, Bienvenidos!"/>
+      <AppRouter/>
+      
       
     </div>
   );

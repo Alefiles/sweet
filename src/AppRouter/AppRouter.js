@@ -1,0 +1,27 @@
+import React from "react";
+import {BrowserRouter, Route, Switch} from "react-router-dom";
+import Home from "../Pages/Home";
+import Contact from "../Pages/Contact";
+import ErrorPage from "../Pages/ErrorPage";
+import DetalleProd from "../Pages/DetalleProd";
+import Carrito from "../Pages/Carrito";
+import Tienda from "../Pages/Tienda";
+import NavBar from "../components/NavBar/NavBar";
+
+
+export default function AppRouter () {
+    return(
+            <BrowserRouter>
+                <NavBar/>
+                    <Switch>
+                        <Route path="/contactanos" component ={Contact}/>
+                        <Route exact path="/" component ={Home}/> 
+                        <Route path="/DetalleProd/:itemid" component ={DetalleProd}/>
+                        <Route path="/Tienda/:categoryid" component={Tienda}/>
+                        <Route path="/Carrito" component ={Carrito}/>
+                        <Route path="*" component ={ErrorPage}/>
+                    </Switch>
+            </BrowserRouter>
+
+    )
+    };

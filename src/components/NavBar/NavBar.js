@@ -9,7 +9,6 @@ import CartWidget from "../CartWidget/CartWidget";
 
 
 const NavBar =()=>{
-
 return(
     
     <AppBar  position="static" className="navigate">
