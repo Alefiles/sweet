@@ -7,13 +7,14 @@ import ItemList from "../ItemList/ItemList"
 
 
 const ItemListContainer =(props)=>{
-  const {greeting} = props
+  const {greeting, stock, id, category} = props
         return(
+ 
         <div className="listContainer">
             <img src={imagenPpal} alt="imagen principal"/>
             <h1>{greeting}</h1>
             <ItemList/>
-            <Item stock={20} /> 
+            <Item stock={stock}/> 
             
         </div>
         )

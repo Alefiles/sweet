@@ -1,12 +1,14 @@
 import './App.css';
-//import React, {useState, useEffect} from "react"
+import React from "react"
 //Components
 import AppRouter from './AppRouter/AppRouter';
-//import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 
 
+//fase de montaje --> UseEffect
 
 function App() {
+
+
   return (
     <div className="App">
       <AppRouter/>

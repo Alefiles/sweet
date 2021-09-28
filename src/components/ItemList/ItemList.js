@@ -5,7 +5,7 @@ export default function ItemList () {
 
     useEffect (() => {
         const products = [
-            { id:1, category:"galletas", type:"tradicional", flavor:"vainilla", price: 100, stock: 100, picture:""},
+            { id:1, category:"galletas", type:"tradicional", flavor:"vainilla", price: 100, stock: 100, picture:"../../img/galletas_vainilla"},
             { id:2, category:"galletas", type:"tradicional", flavor:"vainilla y chocolate", price: 100, stock: 100, picture:""},
             { id:3, category:"galletas", type:"tradicional", flavor:"vainilla y chips de chocolate", price: 100, stock: 100, picture:""},
             { id:4, category:"galletas", type:"tradicional", flavor:"chocolate y chips blancos", price: 100, stock: 100, picture:""},

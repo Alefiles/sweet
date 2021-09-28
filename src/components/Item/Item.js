@@ -4,12 +4,12 @@ import ItemCount from "../ItemCount/ItemCount";
 
 
 const Item = (props) => {
-const {imgProd, flavor, price, stock} = props
+const {picture, flavor, price, stock} = props
 const buy = () => {alert("Vas a agregar items al carrito")};
     return(
         <div className="container-prod">
             <div className="prod-img">
-            <img src= {imgProd} alt="imagen del prod"/>
+            <img src= {picture} alt="imagen del prod"/>
             </div>
             <div className="product-info">
                 <h3>Sabor: {flavor}</h3>
