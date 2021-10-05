@@ -1,5 +1,6 @@
 import './App.css';
-import React from "react"
+import CartContext from "../src/context/CartContext"
+
 //Components
 import AppRouter from './AppRouter/AppRouter';
 
@@ -10,11 +11,13 @@ function App() {
 
 
   return (
+    
     <div className="App">
+      <CartContext.Provider value={[]}>
       <AppRouter/>
-      
-      
+      </CartContext.Provider>
     </div>
+    
   );
 }
 

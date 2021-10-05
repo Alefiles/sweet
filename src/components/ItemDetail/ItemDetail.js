@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react"
 import Item from "./Components/Item/Item"
 
 
-const  ItemDetail = (props) =>{
+export default function ItemDetail () {
  const { category, flavor, price, picture} = props
     return (
         <div className="product-detail">
@@ -18,5 +18,3 @@ const  ItemDetail = (props) =>{
 
     )
 }
-
-export default ItemDetail;

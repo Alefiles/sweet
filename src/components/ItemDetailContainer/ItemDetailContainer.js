@@ -8,7 +8,7 @@ const  ItemDetailContainer = () =>{
 
     useEffect (() => {
         const product = [
-            { id:1, category:"galletas", type:"tradicional", flavor:"vainilla", price: 100, stock: 100, picture:src="../../img/galletas_vainilla"},
+            { id:1, category:"galletas", type:"tradicional", flavor:"vainilla", price: 100, stock: 100, picture:"../../img/galletas_vainilla"},
             
         ];
         const promise = new Promise((resolve, reject) => {

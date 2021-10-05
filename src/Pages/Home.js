@@ -1,11 +1,17 @@
 import React from "react";
-import ItemListContainer from "../components/ItemListContainer/ItemListContainer";
+import imagenPpal from "../img/choco_cookies2.png"
 
-export default function Home (){
 
+export default function Home (props){
+    const {greeting} =props
     return(
-
-        <ItemListContainer/>
-
+        <div className="homePg">
+        <img src={imagenPpal} alt="imagen principal"/>
+        <h1>{greeting}</h1>
+        </div>
     )
 }
+
+
+
+

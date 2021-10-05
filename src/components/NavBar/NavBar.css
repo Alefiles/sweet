@@ -18,8 +18,3 @@ header > div {
     color: rgb(70, 67, 67);
     display: flex;
 }
-.shopping-cartNav>Button{
-    background-color: #fab1f2;
-    height: 40px;
-    width: 80px;
-}
