@@ -1,14 +1,10 @@
 import "./NavBar.css";
 import logo from "../../img/logoSS2.png";
 import React, {useState} from "react"
-//External components
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
+import Button from "../Button/Button"
+import Dropdown  from "../Dropdown/Dropdown";
 import CartWidget from "../CartWidget/CartWidget";
 import {NavLink} from "react-router-dom";
-
 
 
 export default function NavBar (){
@@ -20,29 +16,32 @@ export default function NavBar (){
         {   name: "Rolls",
             id:"3"},
     ])
+    const [click, setClick]=useState(false)
+    const handleClick =() => setClick (!click)
+
 return(
-    
-    <AppBar  position="static" className="navigate">
-        <Toolbar>
-            <Typography variant="h6">
-                <div className="logo-container">
-                    <img src={logo} alt="logo"/>
-                </div>
-            </Typography>
-            <div className="buttons-div">
+    <div>
+        <nav className="nav-bar">
+            <div className="logo-container">
+               <NavLink><img src={logo} alt="logo"/></NavLink>
+            </div>
+        
+            <div className="nav-menu" onClick={handleClick}>
+                <i className={click? "fas fa-times": "fas fa-bars"}/>
                 <ul className="nav-buttons">
-                    <li><NavLink to="/"><Button color="inherit">Inicio</Button></NavLink></li>
-                    <li><NavLink to ="/Nosotros"><Button color="inherit">Nosotros</Button></NavLink></li>
-                    <Button color="inherit">Tienda</Button>
-                    {categories.map((category)=> {
-                        return <NavLink to={"/category/${category.Id}"}>{category.name}</NavLink>
-                    })}
-                    <li><NavLink to="/contactanos"><Button color="inherit">Contacto</Button></NavLink></li>
+                    <li><NavLink to="/">Inicio</NavLink></li>
+                    <li><NavLink to ="/Nosotros">Nosotros</NavLink></li>
+                    <li><NavLink to ="/Tienda">Tienda</NavLink></li>
+                        
+                             {categories.map((category)=> {
+                                return <NavLink to={"/category/${category.Id}"}>{category.name}</NavLink>
+                                })}
+                        
+                    <li><NavLink to="/contactanos">Contacto</NavLink></li>
                 </ul>
             </div>
-            <CartWidget/>
-        </Toolbar>
-
-    </AppBar>
+        </nav>
+        <CartWidget/>
+    </div>
 );
 }
