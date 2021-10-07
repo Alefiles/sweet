@@ -24,10 +24,10 @@ return(
             <div className="logo-container">
                 <NavLink to="/"><img src={logo} alt="logo"/></NavLink>
             </div>
-        
-            <div className="nav-menu">
+            <div>
                 <ul className="nav-buttons">
-                    <li> <NavLink to="/">Inicio</NavLink></li>
+                    <li>
+                        <NavLink to="/">Inicio</NavLink></li>
                     <li><NavLink to ="/Nosotros">Nosotros</NavLink></li>
                     <li><NavLink to ="/Tienda">Tienda</NavLink></li>
                         {categories.map((category)=> {
