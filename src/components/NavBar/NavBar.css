@@ -17,4 +17,9 @@ header > div {
     list-style: none;
     color: rgb(15, 15, 15);
     display: flex;
+    text-decoration: none;
+}
+
+.nav-buttons:hover {
+    background-color: bisque;
 }
