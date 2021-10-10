@@ -7,13 +7,14 @@ export default function Home (props){
     return(
         <div className="homePg">
             <h1>{greeting}</h1> 
+            <h2> Los invitamos a un viaje de sabores que los deleitarán en sus desayunos y meriendas</h2>
             <div id="img-ppal">
                 <img  id="imagen-home"src={imagenPpal} alt="imagen principal"/>
             </div>
             <div className="greeting">
                 
             
-            <h2> Los invitamos a un viaje de sabores que los deleitarán en sus desayunos y meriendas</h2>
+            
             </div>
        
 
