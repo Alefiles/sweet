@@ -2,28 +2,28 @@
 import React, {useState, useEffect} from "react";
 import {useParams} from "react-router-dom"
 import Item from "../Item/Item";
-import "./ItemList.css"
-import galleVainilla from "../../img/images/galletas_vainilla"
-import galleMarmolada from "./galleta_vainilla_chocolate.jpg"
-import galleVainillaChispas from "./galletas_vainilla_chispas.jpg"
-import galleChocoChispas from "./galletas_chocolate_chipsbco.jpg"
-import galleChoco from "./galleta_choco.jpg"
-import galleCafe from "./galleta_cafe.jpg"
-import galleLimon from "./galleta_limon.jpg"
-import galleCafeCardamomo from "./galleta_cafe.jpg"
-import galleNaranja from "./galletas_naranja.jpg"
-import galleJengibre from "./galletas_jengibre.jpg"
-import galleMani from "./galleta_manteca_mani.jpg"
-import rollCanela from "./rolls_canela.jpg"
-//import rollManzana from " ./rolls_manzana.jpg"
-import loafBananaNuez from "./loaf_cake_banana_choconuez.jpg"
-import loafBanana from "./loaf_cake_banana.jpg"
-import loafMarmolado from "./loaf_cake_marmolado.png"
-import loafZanahoria from "./loaf_cake_zanahoria.jpg"
-import loafLimonAmapola from "./loaf_cake_limon_amapola.jpg"
-import loafChocolate from "./loaf_cake_chocolate.JPG"
-import loafVainilla from "./loaf_cake_vainilla"
-import loafArandanos from "./loaf_cake_arandanos.jpg";
+import "./ItemList.css";
+import galleVainilla from "../../Img/galletas_vainilla.jpg";
+import galleMarmolada from "../../Img/galletas_vainilla_chocolate.jpg";
+import galleVainillaChispas from "../../Img/galletas_vainilla_chispas.jpg";
+import galleChocoChispas from "../../Img/galletas_chocolate_chipsbco.jpg";
+import galleChoco from "../../Img/galletas_choco.jpg";
+import galleCafe from "../../Img/galletas_cafe.jpg";
+import galleLimon from "../../Img/galletas_limon.jpg";
+import galleCafeCardamomo from "../../Img/galletas_cafe.jpg";
+import galleNaranja from "../../Img/galletas_naranja.jpg";
+import galleJengibre from "../../Img/galletas_jengibre.jpg";
+import galleMani from "../../Img/galletas_manteca_mani.jpg";
+import rollCanela from "../../Img/rolls_canela.jpg";
+import rollManzana from "../../Img/rolls_manzana_caramelo.jpg";
+import loafBananaNuez from "../../Img/loaf_cake_banana_choconuez.jpg";
+import loafBanana from "../../Img/loaf_cake_banana.jpg";
+import loafMarmolado from "../../Img/loaf_cake_marmolado.png";
+import loafZanahoria from "../../Img/loaf_cake_zanahoria.jpeg";
+import loafLimonAmapola from "../../Img/loaf_cake_limon_amapola.jpg";
+import loafChocolate from "../../Img/loaf_cake_chocolate.JPG";
+import loafVainilla from "../../Img/loaf_cake_vainilla";
+import loafArandanos from "../../Img/loaf_cake_arandanos.jpg";
 
 
 export default function ItemList () {
@@ -43,7 +43,7 @@ export default function ItemList () {
             { Id:10, category:"galletas", type:"gourmet", flavor:"jengibre y especias", price: 180, stock: 50, picture:{galleJengibre}}, 
             { Id:11, category:"galletas", type:"gourmet", flavor:"manteca de maní", price: 180, stock: 50, picture:{galleMani}}, 
             { Id:12, category:"rollos", type:"rolls", flavor:"canela", price: 220, stock: 50, picture:{rollCanela}},
-            //{ Id:13, category:"rollos", type:"rolls", flavor:"manzana y canela", price: 220, stock: 50, picture:{rollManzana}},
+            { Id:13, category:"rollos", type:"rolls", flavor:"manzana y canela", price: 220, stock: 50, picture:{rollManzana}},
             { Id:14, category:"loaf cakes", type:"gourmet", flavor:"banana con trozos de chocolate y nuez", price: 600, stock: 20, picture:{loafBananaNuez}},
             { Id:15, category:"loaf cakes", type:"tradicional", flavor:"banana", price: 220, stock: 20, picture:{loafBanana}},
             { Id:16, category:"loaf cakes", type:"tradicional", flavor:"marmolado", price: 220, stock: 20, picture:{loafMarmolado}},

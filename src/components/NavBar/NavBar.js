@@ -1,6 +1,6 @@
 import React, {useState, useEffect, useContext} from "react"
 import "./NavBar.css";
-import logo from "../../img/logoSS2.png";
+import logo from "../../Img/logoSS2.png";
 import CartWidget from "../CartWidget/CartWidget";
 //componentes externos
 import {NavLink} from "react-router-dom";

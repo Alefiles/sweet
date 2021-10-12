@@ -1,5 +1,5 @@
 import React from "react";
-import imagenPpal from "../img/choco_cookies2.png"
+import imagenPpal from "../Img/choco_cookies2.png"
 import "./Home.css"
 
 export default function Home (props){

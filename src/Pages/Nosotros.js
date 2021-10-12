@@ -1,5 +1,5 @@
 import React from "react";
-import imgNosotros from "../img/nosotros.jpg";
+import imgNosotros from "../Img/nosotros.jpg";
 import "./Home.css";
 
 
