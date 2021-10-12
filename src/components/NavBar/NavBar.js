@@ -14,11 +14,11 @@ import MenuItem from "@material-ui/core/MenuItem";
 export default function NavBar (props) {
     const [categories, setcategory] =useState ([
         {   name: "Galletas",
-            id:"1"},
+            Id:"1"},
         {  name: "Budines",
-            id:"2"},
+            Id:"2"},
         {   name: "Rolls",
-            id:"3"},
+            Id:"3"},
     ])
 
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -52,13 +52,13 @@ return(
                             Tienda
                             </Button></li>
                     <li>
-                        <Menu 
+                        <Menu class="menu-dropdwn"
                         id="basic-menu" 
                         anchorEl={anchorEl} 
                         open={Boolean(anchorEl)} 
                         onClose={handleClose}>
                         {categories.map((category, index)=> {
-                                return <MenuItem key={index}><NavLink to={"/category/${category.Id}"}>{category.name}</NavLink></MenuItem>
+                                return <MenuItem key={index}><NavLink to={'/category/${category.Id}'}>{category.name}</NavLink></MenuItem>
                                 })}
                         </Menu>
                     </li>

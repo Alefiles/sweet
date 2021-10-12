@@ -1,6 +1,6 @@
 import React from "react";
-import imgNosotros from "../img/nosotros.jpg"
-import "./Nosotros.css"
+import imgNosotros from "../img/nosotros.jpg";
+import "./Home.css";
 
 
 export default function Nosotros (){
@@ -14,8 +14,8 @@ export default function Nosotros (){
                 <h1> Nosotros </h1>
             </div>
             <div id="parrafo-nosotros">
-                <p> Somos un emprendimiento familiar.
-                    Cocinamos con las mejores materias primar para brindar a tu familia la misma calidad y amor que a la nuestra. Te invitamos a probar nuestros productos.
+                <h3> Somos un emprendimiento familiar.</h3>
+                   <p> Cocinamos con las mejores materias primar para brindar a tu familia la misma calidad y amor que a la nuestra. Te invitamos a probar nuestros productos.
                 </p>
             </div>
         </div>

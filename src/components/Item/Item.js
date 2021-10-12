@@ -16,6 +16,7 @@ const buy = () => {alert("Vas a agregar items al carrito")};
                 <p>${price}</p>
                 
                 <ItemCount stock={stock} buy={buy}/>
+
             </div>
         </div>
     )

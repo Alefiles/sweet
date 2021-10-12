@@ -2,9 +2,11 @@ import React, {useState, useEffect} from "react"
 import Item from "./Components/Item/Item"
 
 
-export default function ItemDetail () {
- const { category, flavor, price, picture} = props
-    return (
+export default function ItemDetail (props) {
+const {data} = props
+ const { category, flavor, price, picture} = data
+    
+ return (
         <div className="product-detail">
             <h2>{props.category}</h2>
                 <div>

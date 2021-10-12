@@ -6,11 +6,11 @@ export default function Dropdown () {
 
     const [categories, setcategory] =useState ([
         {   name: "Galletas",
-            id:"1"},
+            Id:"1"},
         {  name: "Budines",
-            id:"2"},
+            Id:"2"},
         {   name: "Rolls",
-            id:"3"},
+            Id:"3"},
     ])
     const [click, setClick] =useState(false)
     const handleClick =() => setClick(!click)

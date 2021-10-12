@@ -10,7 +10,7 @@ import galleNaranja from "./galletas_naranja.jpg"
 import galleJengibre from "./galletas_jengibre.jpg"
 import galleMani from "./galleta_manteca_mani.jpg"
 import rollCanela from "./rolls_canela.jpg"
-import rollManzana from " ./rolls_manzana_canela_caramelo.jpg"
+import rollManzana from " ./rolls_manzana_caramelo.jpg"
 import loafBananaNuez from "./loaf_cake_banana_choconuez.jpg"
 import loafBanana from "./loaf_cake_banana.jpg"
 import loafMarmolado from "./loaf_cake_marmolado.png"
@@ -20,7 +20,7 @@ import loafChocolate from "./loaf_cake_chocolate.JPG"
 import loafVainilla from "./loaf_cake_vainilla"
 import loafArandanos from "./loaf_cake_arandanos.jpg";
 
-export default [
+export default {
     galleVainilla,
     galleMarmolada,
     galleVainillaChispas,
@@ -42,4 +42,4 @@ export default [
     loafChocolate,
     loafVainilla,
     loafArandanos,
-]
+}
