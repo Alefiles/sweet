@@ -1,11 +1,13 @@
 .listContainer {
     display: block;
-    height: 400px;
+    height: inherit;
     width: inherit;
     margin-top: 10px;
+    padding-top: 20px;;
     background: rgb(243, 221, 239);
 }
-.listContainer>h1 {
+.listContainer>h3 {
     font-weight: bold;
+    text-align: center;
     
     }

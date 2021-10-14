@@ -9,16 +9,10 @@ export default function ItemListContainer (props){
     const {stock, Id, category} = props
         return(
         <div className="listContainer">
-            <p>categoría{category}</p>
+            <h3>{category}</h3>
+            <div className="listaProd">
             <ItemList/>
-            <ItemList/>
-            <ItemList/>
-            <ItemList/>
-            <ItemList/>
-            <ItemList/>
-            <ItemList/>
-
-            <Item stock={stock}/> 
+            </div>
             
         </div>
         )

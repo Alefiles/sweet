@@ -35,39 +35,57 @@ return(
     <AppBar  position="static" className="navigate">
         <Toolbar>
                 <div className="logo-container">
-                <NavLink to="/">  <img src={logo} className="logo-app" alt="logo Sweet" /></NavLink>
+                    <NavLink to="/">
+                        <img src={logo} className="logo-app" alt="logo Sweet" />
+                    </NavLink>
                 </div>
-                
-            <div className="buttons-div">
-            <ul className="nav-buttons">
-                    <li><Button color="inherit"><NavLink to="/">Inicio</NavLink></Button></li>
-                    <li><Button color="inherit"><NavLink to ="/Nosotros">Nosotros</NavLink></Button></li>
-                    <li><Button
-                        id="basic-button"
-                        aria-controls="basic-menu"
-                        aria-haspopup="true"
-                        aria-expanded={open ? 'true' : undefined}
-                        onClick={handleClick}
-                        color="inherit">
-                            Tienda
-                            </Button></li>
-                    <li>
-                        <Menu class="menu-dropdwn"
-                        id="basic-menu" 
-                        anchorEl={anchorEl} 
-                        open={Boolean(anchorEl)} 
-                        onClose={handleClose}>
-                        {categories.map((category, index)=> {
-                                return <MenuItem key={index}><NavLink to={'/category/${category.Id}'}>{category.name}</NavLink></MenuItem>
+                <div className="buttons-div">
+                    <ul className="nav-buttons">
+                        <li>
+                            <Button color="inherit">
+                                <NavLink to="/">Inicio</NavLink>
+                            </Button>
+                        </li>
+                        <li>
+                            <Button color="inherit">
+                                <NavLink to ="/Nosotros">Nosotros</NavLink>
+                            </Button>
+                        </li>
+                        <li>
+                            <Button
+                                id="basic-button"
+                                aria-controls="basic-menu"
+                                aria-haspopup="true"
+                                aria-expanded={open ? 'true' : undefined}
+                                onClick={handleClick}
+                                color="inherit">
+                                    Tienda
+                            </Button>
+                        </li>
+                        <li>
+                            <Menu class="menu-dropdwn"
+                                id="basic-menu" 
+                                anchorEl={anchorEl} 
+                                open={Boolean(anchorEl)} 
+                                onClose={handleClose}
+                            >
+                                {categories.map((category, index)=> {
+                                return (
+                                <MenuItem key={index}>
+                                    <NavLink to={`/category/${category.Id}`}>{category.name}</NavLink>
+                                </MenuItem>);
                                 })}
-                        </Menu>
-                    </li>
-                    
-                    <li><Button color="inherit"><NavLink to="/contactanos">Contacto</NavLink></Button></li>
-                </ul>
-            </div>
+                            </Menu>
+                        </li>
+                        <li>
+                            <Button color="inherit">
+                                <NavLink to="/contactanos">Contacto</NavLink>
+                            </Button>
+                        </li>
+                    </ul>
+                </div>
         
-        <CartWidget/>
+                <CartWidget/>
         </Toolbar>
     </AppBar>
 );
