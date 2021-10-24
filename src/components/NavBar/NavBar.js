@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useContext} from "react"
+import React, {useState} from "react"
 import "./NavBar.css";
 import logo from "../../Img/logoSS2.png";
 import CartWidget from "../CartWidget/CartWidget";
@@ -31,13 +31,13 @@ export default function NavBar (props) {
         const q= query(categoryCol, where("category", "==", true))
 
         //recupero los resultados
-        const categorySnapshop = await getDocs(q);
+        const categorySnapshop = await getDocs(categoryCol);
         categorySnapshop.forEach((doc)=>{
-            console.log(doc.category,"=>", doc.data());
-        const categoryList =categorySnapshop.docs.map (doc.category,"=>", doc.data())
+           // console.log(doc.category,"=>", doc.data());
+        const categoryList =categorySnapshop.docs.map (doc => doc.category);
         return setCategories(categoryList)
         });
-    }
+    }    
 
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
