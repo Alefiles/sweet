@@ -4,10 +4,13 @@ import ItemCount from "../ItemCount/ItemCount";
 //componentes externos
 import {NavLink} from "react-router-dom";
 import Button from "@material-ui/core/Button";
+//import CartContext from "../../context/CartContext"
 
 
 const Item = (props) => {
-const {picture, flavor, price, stock} = props
+    //const { items, addItems} = useContext(CartContext);
+
+const {Id, picture, flavor, price, stock} = props
 const buy = () => {
     
     alert("Vas a agregar items al carrito")
@@ -21,7 +24,10 @@ const buy = () => {
                 <h5> {flavor}</h5>
                 <p>${price}</p>
                 <ItemCount stock={stock} buy={buy}/>
-                <Button> <NavLink to="/DetalleProd">Detalle </NavLink></Button>
+            <div className="button-container">
+                <Button onClick={buy}>Comprar</Button>
+                <Button> <NavLink to={`/DetalleProd/${Id}`}>Detalle </NavLink></Button>
+            </div>
             </div>
         </div>
     );

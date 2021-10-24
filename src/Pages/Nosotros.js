@@ -15,7 +15,7 @@ export default function Nosotros (){
             </div>
             <div id="parrafo-nosotros">
                 <h3> Somos un emprendimiento familiar.</h3>
-                   <p> Cocinamos con las mejores materias primar para brindar a tu familia la misma calidad y amor que a la nuestra. Te invitamos a probar nuestros productos.
+                <p> Cocinamos con las mejores materias primas para brindarle a tu familia la misma calidad y amor que a la nuestra. Te invitamos a probar nuestros productos.
                 </p>
             </div>
         </div>

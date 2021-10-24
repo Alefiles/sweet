@@ -9,17 +9,35 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
-
+//Firebase
+import db from "../../firebase"
+import{collection, getDocs, query, where} from "firebase/firestore"
 
 export default function NavBar (props) {
-    const [categories, setcategory] =useState ([
+   /* const [categories, setcategory] =useState ([
         {   name: "Galletas",
             Id:"1"},
         {  name: "Budines",
             Id:"2"},
         {   name: "Rolls",
             Id:"3"},
-    ])
+    ])*/
+
+    const [categories, setCategories] = useState ([]);
+
+    async function getCategory(db) {
+        const categoryCol = collection (db, "Items");
+        
+        const q= query(categoryCol, where("category", "==", true))
+
+        //recupero los resultados
+        const categorySnapshop = await getDocs(q);
+        categorySnapshop.forEach((doc)=>{
+            console.log(doc.category,"=>", doc.data());
+        const categoryList =categorySnapshop.docs.map (doc.category,"=>", doc.data())
+        return setCategories(categoryList)
+        });
+    }
 
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
@@ -29,7 +47,6 @@ export default function NavBar (props) {
     const handleClose = () => {
     setAnchorEl(null);
     };
-
 
 return(
     <AppBar  position="static" className="navigate">
