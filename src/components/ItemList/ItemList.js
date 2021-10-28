@@ -1,9 +1,10 @@
-//import { IndeterminateCheckBox } from "@material-ui/icons";
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, useContext} from "react";
 import {useParams} from "react-router-dom"
 import Item from "../Item/Item"
 import picture from "../../Img/images"
-//import {Link} from "react-router-dom"
+
+
+//componentes externos
 import Box from "@mui/material/Box";
 import "./ItemList.css";
 //Firebase
@@ -12,10 +13,12 @@ import {collection, getDocs} from "firebase/firestore";
 
 
 export default function ItemList () {
-    
+
+
+
     const [items, setItems] = useState ([]);
 
-//Función asíncrona de acceso a la DB para traer los items   
+//Función asíncrona de acceso a la DB de Firebase para traer los items   
     async function getItems(db) {
         const ItemsCol = collection (db, "Items");
         const ItemsSnapshot = await getDocs(ItemsCol);
@@ -27,8 +30,7 @@ export default function ItemList () {
     useEffect (() => {
         getItems(db) 
     },[])
-   
-
+    
     return (
         <div className={"container-general"}>
 
@@ -40,7 +42,7 @@ export default function ItemList () {
                                     category={item.category} 
                                     flavor={item.flavor} 
                                     price={item.price} 
-                                    image={item.picture} 
+                                    picture={item.picture} 
                                     id={item.id} />
                                 )
                                 })

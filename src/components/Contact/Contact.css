@@ -1,0 +1,12 @@
+.ContenedorContacto {
+display: block;
+height: 100vh;
+width: 100%;
+background: lightblue;
+}
+
+.ContenedorContacto >Box {
+display: flex;
+width: 100px;
+
+}

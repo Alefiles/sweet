@@ -1,15 +1,15 @@
 .container-prod {
-    background-color: rgb(245, 231, 215); 
+    background-color: rgb(231, 171, 233); 
     width: 20vw;
-    height: 50vh;
     margin: 1vh;
     border-radius: 10%;
     box-shadow: grey;
 }
-.prod-img {
-    width: 15vw;
-    height: 25vh;
-}
 .product-info{
     margin: 2vh;
+}
+
+.botones-lista {
+padding-top: 25px;
+
 }

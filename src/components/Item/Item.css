@@ -1,29 +1,19 @@
 .container-prod {
     display: inline-block;
-    background-color: bisque; 
+    background-color: rgb(239, 176, 245); 
     width: 50vw;
     height: 60vh;
     margin: 1vh;
     border-radius: 10%;
     box-shadow: grey;
-  
-}
-.prod-img {
-    display:block;
-    width: 15vw;
-    height: 18vh;
-    align-items: center;  
 }
 
+
 .prod-img >img {
-    width: 14vw;
-    height: 18vh;
-    margin-top: 2vh;
-    margin-left:4vw;
-    border-radius: 10%;    
-    
-    
-}
-.product-info{
-    margin: 1vh;
+    width: 12vw;
+    height: 12vw;
+    margin-top: 10px;
+    border-color: rgb(235, 152, 243);
+    border-style: solid;
+    border-radius: 50%;    
 }

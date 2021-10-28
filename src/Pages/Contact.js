@@ -1,8 +1,19 @@
-import React from "react";
+import React, {useState} from "react";
+import ContactInput from "../components/Contact/ContactInput";
 
 export default function Contact (){
-
+ 
+        const [name, setName]= useState ()
+        const showSaludo= (text) => {
+            setName (text)
+        }
     return (
-        <h1>Esto será el formulario de contacto</h1>
+        <div className="ContactContainer">
+            <h1> ¡Contactanos!</h1>
+               <h2> Muchas gracias {name} por tu mensaje</h2>
+            <ContactInput showSaludo={showSaludo}/>
+
+        </div>
+
     )
 };

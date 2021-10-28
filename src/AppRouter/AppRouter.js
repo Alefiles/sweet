@@ -19,17 +19,14 @@ export default function AppRouter () {
             <BrowserRouter>
                 <NavBar/>
                     <Switch>
-                        <Route exact path="/" component ={Home}/> 
-                        <Route path="/Nosotros" component ={Nosotros}/>
-                        <Route path="/category/:categoryId" component={Tienda}/>
-                        <Route path="/contactanos" component ={Contact}/>
-                        
+                        <Route path="/Contactanos" component ={Contact}/>
                         <Route path="/DetalleProd/:itemId" component ={DetalleProd}/>
-                        
+                        <Route path="/category/:categoryId" component={Tienda}/>
+                        <Route path="/Nosotros" component ={Nosotros}/>
                         <Route path="/Carrito" component ={Carrito}/>
+                        <Route exact path="/" component ={Home}/> 
                         <Route path="*" component ={ErrorPage}/>
                     </Switch>
             </BrowserRouter>
-
     )
     };
