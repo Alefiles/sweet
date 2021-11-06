@@ -1,29 +1,75 @@
 import React, { createContext, useState } from "react";
+//External Components
 import { faFileInvoiceDollar } from "@fortawesome/free-solid-svg-icons";
 import { Category } from "@material-ui/icons";
+import { Toast } from "reactstrap";
 
 
-const CartContext = createContext ();
-/*
-//function CartContent (){
+export const CartContext = createContext ();
 
-//const[cartContent, setCartContent] =useState([])
+export const CartProvider =(props) => {
+    const[cart, setCart]=useState([]);
 
-//const handleCart = (e) => {
-//    console.log ("que esta comprando")
-//}
+//agrega items al carrito desde el contador
+    const addItem = (items, count) => {
+        const newItem ={ ...items, contador: count};
+            if (!isInCart(item)) {
+                setCart([...cart, newItem]);
+            }
+            else{
+                let foundItem = cart.find((el) => el.id === item.id);
+                foundItem.contador = foundItem.contador + count;
+                setCart([...cart]);
+            }
+    };
+// valida si el item está en el carrito
+    const isInCart =(item) => {
+        return cart && cart.some((element) => element.id ===item.id);
+    };
 
-//const carrito = {
-// Al clickear comprar en el Item Detail se debe guardar en el Cart Context el producto y su cantidad en forma de objeto {name, price, quantity, etc} dentro del array de productos agregados.
+// eliminar un item del carrito
+    const deleteItem = (id) => {
+        const remItem = cart.filter((el) => el.id !== id);
+        setCart([...remItem]);
+        notifyError("Eliminaste el item del carrito");
+    };
 
-    //addItem (item, quantity)  ...agregar cierta cantidad de un ítem al carrito
-    //removeItem(itemId) ... remover un item del cart por usando su id
-    //clear() ...remover todos los items
-    //isInCart: (id) =>true|false
+    const notifyError = (text) => Toast.error(text);
+    const notifySuccess = (text) => Toast.success(text);
 
-//}
+// vacía completamente el carrito
+    const clear = () => {
+        return setCart ([]);
+    };
 
-//}
+// suma el importe total a pagar
+    const totalCarrito =()=>
+        cart.reduce(
+            (prevValue, currentValue) =>
+                prevValue + currentValue.price * currentValue.contador,0);
 
-*/
-export default CartContext;
+// suma la cantidad total de items del carrito
+    const qTotalCarrito =()=>
+        cart.reduce(
+            (prevValue, currentValue) => prevValue + currentValue.contador,0
+        );
+
+        console.log("Total carrito: ", totalCarrito());
+
+    return (
+        <CartContext.Provider
+            value ={{
+                cart,
+                setCart,
+                addItem,
+                totalCarrito,
+                qTotalCarrito,
+                deleteItem,
+                clear,
+                notifyError,
+                notifySuccess,
+            }}>
+                {props.children}
+            </CartContext.Provider>
+    );
+};
