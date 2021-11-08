@@ -72,7 +72,8 @@ const handleClose = () => {
                                     {categories.map((category, index) => {
                                         return (
                                             <MenuItem key={index}>
-                                                <NavLink to={`/category/${category.name}`}>
+                                                <NavLink onClick={handleClose}
+                                                to={`/category/${category.name}`}>
                                                 {category.name}
                                                 </NavLink>
                                             </MenuItem>

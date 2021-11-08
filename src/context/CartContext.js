@@ -10,9 +10,10 @@ export const CartContext = createContext ();
 export const CartProvider =(props) => {
     const[cart, setCart]=useState([]);
 
+
 //agrega items al carrito desde el contador
-    const addItem = (items, count) => {
-        const newItem ={ ...items, contador: count};
+    const addItem = (item, count) => {
+        const newItem ={ ...item, contador: count};
             if (!isInCart(item)) {
                 setCart([...cart, newItem]);
             }

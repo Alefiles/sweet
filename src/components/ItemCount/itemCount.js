@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import Button from '@material-ui/core/Button';
+
 //import Product from "../Product/Product";
 
 export default function ItemCount(props){
@@ -14,7 +15,7 @@ const {stock, buy, onAdd, delItem, quantity, items} = props ;
             <button disabled={items >= stock} onClick={onAdd}>+</button>
             
         </div>
-        <Button onClick ={() => buy ()} >Agregar</Button>
+        <Button onClick ={() => buy ()} >Comprar</Button>
         </div>
     )
 }

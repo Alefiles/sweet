@@ -1,5 +1,5 @@
 import React from "react"
-import ItemDetail from "../components/ItemDetail/ItemDetail"
+import ItemDetailContainer from "../components/ItemDetailContainer/ItemDetailContainer";
 
 export default function DetalleProd (){
     //const {itemId} = useParams()
@@ -7,8 +7,8 @@ export default function DetalleProd (){
 
     return(
         <div>
-        <h1>Anda la osa, que despelote</h1>
-        <ItemDetail/>
+        <h1>Detalle del producto</h1>
+        <ItemDetailContainer/>
         </div>
     );
 }

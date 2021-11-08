@@ -1,7 +1,6 @@
 import React, {useState, useEffect, useContext} from "react";
 import {useParams} from "react-router-dom"
 import Item from "../Item/Item"
-import picture from "../../Img/images"
 
 
 //componentes externos
@@ -15,39 +14,38 @@ import {collection, getDocs, where, query} from "firebase/firestore";
 export default function ItemList () {
 
 
-
     const [items, setItems] = useState ([]);
     const {categoryId} = useParams();
 
 //Función asíncrona de acceso a la DB de Firebase para traer los items   
 async function getItems(db) {
-    let ItemsCol = categoryId
-        ?query(
-            collection(db, "items"),
-            where ("category", "==", categoryId)
-        )
-    : collection(db, "Items");
+
+    let ItemsCol =collection(db, "Items");
     const ItemsSnapshot = await getDocs(ItemsCol);
+    console.log("itemsCol: ", ItemsCol)
     const ItemsList = ItemsSnapshot.docs.map (doc => doc.data());
-    return setItems(ItemsList)
+    console.log("ItemsSnapshot: ", ItemsSnapshot)
+    const ItemsFilter = ItemsList.filter(item => item.category === categoryId)
+    return setItems(ItemsFilter)
 }
 
 useEffect (() => {
     getItems(db) 
 },[categoryId])
-    return (
-        <div className={"container-general"}>
-
+return (
+    <div className={"container-general"}>
+    
+    {console.log("lista de prod: ", items)}
                     {items.length !==0 ?(
-                            items.map((item, categoryId)=> {
+                            items.map((item, Id)=> {
                                 return(
                                     <Item 
-                                    key={`item-${item.id}`} 
-                                    category={item.categoryId} 
+                                    key={`item-${item.Id}`} 
+                                    category={item.category} 
                                     flavor={item.flavor} 
                                     price={item.price} 
                                     picture={item.picture} 
-                                    id={item.id} />
+                                    Id={item.Id} />
                                 )
                                 })
                     ) : (

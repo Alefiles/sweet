@@ -1,12 +1,14 @@
-import React from "react";
-
+import React, {useState} from "react";
+import { CartContext } from "../../context/CartContext";
 
 export default function CartView () {
 
+const {cart, addItem } =useState
     return (
 
-        <div>
-            <h1> Acá va a ir el contenido del carrito</h1>
+        <div className="containerGeneral">
+            <h1> Carrito de compras</h1>
+            
 
         </div>
     )

@@ -2,7 +2,7 @@ import './App.css';
 
 //Components
 import AppRouter from './AppRouter/AppRouter';
-import CartContext from "../src/context/CartContext"
+import {CartContext} from "../src/context/CartContext"
 
 //fase de montaje --> UseEffect
 
