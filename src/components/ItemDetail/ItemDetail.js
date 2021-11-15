@@ -1,6 +1,7 @@
 import React, {useState, useEffect, useContext} from "react"
 import ItemCount from "../ItemCount/ItemCount";
-import {CartContext} from "../../context/CartContext";
+import {CartContext} from "../../context/CartContext"
+import "./ItemDetail.css"
 
 //Componentes externos
 import Button from '@material-ui/core/Button';
@@ -10,10 +11,10 @@ import {NavLink, useParams} from "react-router-dom";
 export default function ItemDetail (props) {
 
 //Llamo al contexto del carro de compras
-const contextData = useContext(CartContext)
+const [cart, setCart] = useContext(CartContext);
 
 const {itemId} = useParams();
-const {Id, category, flavor, price, picture, stock} = props
+const {Id, category, flavor, price, picture, stock, description} = props
 const [items, setItems] = useState(1)
 
 const buy = () => {
@@ -37,18 +38,22 @@ const delItem = () => {
 
 
 return (
-        <div className="product-detail">
+        <div>
             <h2>{category}</h2>
-                <div>
+                <div className="prodImg">
                     <img src={picture} alt="imagen producto"/>
                 </div>
-                <div>
+                <div className="itemInfo">
                     <h3>{flavor}</h3>
+                    <p>{description}</p>
                     <p> precio: ${price}</p>
-                    <div className="button-container">
-                        <ItemCount onAdd={onAdd} delItem={delItem} stock={stock} quantity={items} buy={buy}/>
+                    <div className="buttonContainer">
+                    <ItemCount onAdd={onAdd} delItem={delItem} stock={stock} quantity={items} buy={buy}/>
+                    
+                    <Button onClick ={() => buy ()} >Comprar</Button>
+                    </div>   
                         <NavLink to="/"><Button> Inicio </Button></NavLink>
-                    </div>
+                    
                 </div>
         </div>
 

@@ -28,3 +28,7 @@ header > div {
 
     padding-top:10px;
 }
+
+nav ul li:hover{
+    color: lightblue;
+}

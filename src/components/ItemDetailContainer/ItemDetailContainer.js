@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react"
 import {useParams} from "react-router-dom"
 import ItemDetail from "../ItemDetail/ItemDetail"
 import db from "../../firebase"
+import "./ItemDetailContainer.css"
 
 import { doc, getDoc } from "@firebase/firestore";
 
@@ -25,14 +26,15 @@ const  ItemDetailContainer = () =>{
 
     
     return (
-        <div className="product-detail-container">
+        <div className="containerProd">
         {console.log("detalle prod: ", productDetail)}
             <ItemDetail 
             category={productDetail.category} 
             flavor={productDetail.flavor} 
             picture={productDetail.picture} 
             price={productDetail.price}
-            stock={productDetail.stock}/>
+            stock={productDetail.stock}
+            description={productDetail.description}/>
 
         </div>
 

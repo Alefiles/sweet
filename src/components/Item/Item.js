@@ -1,7 +1,7 @@
 import React, {useState, useEffect, useContext} from "react"
 import "./Item.css";
 import ItemCount from "../ItemCount/ItemCount";
-
+import {CartContext} from "../../context/CartContext"
 //componentes externos
 import Button from '@material-ui/core/Button';
 import {Link} from "react-router-dom";
@@ -13,6 +13,7 @@ const Item = (props) => {
 
 const {Id, category, flavor, price, picture, stock} = props
 const [items, setItems] = useState(1)
+const [cart, setCart] = useContext(CartContext);
 
 const buy = () => {
     
@@ -32,19 +33,22 @@ const delItem = () => {
 }
 
     return(
-        <div className="container-prod">
-                <div className="prod-img">
+        <div className="containerProd">
+            <div className ="itemCard">
+                <div className="prodImg">
                     <img src= {picture} alt="imagen del prod"/>
                 </div>
-                <div className="item-info">
+                <div className="itemInfo">
                     <h3> {flavor}</h3>
                     <p>${price}</p>
-                </div>
-                <div className="botones-lista">
-                    <ItemCount onAdd={onAdd} delItem={delItem} stock={stock} quantity={items} buy={buy}/>
-                
+
                     <Link to={`/DetalleProd/${Id}`}><Button>Más info</Button></Link>
+
+                    <ItemCount onAdd={onAdd} delItem={delItem} stock={stock} quantity={items} buy={buy}/>
+
+                    <Button onClick ={() => buy ()} >Comprar</Button>
                 </div>  
+            </div>
         </div>
     );
 };

@@ -1,24 +1,31 @@
-.container-prod {
+.containerProd {
     display: inline-block;
-    background-color: rgb(239, 176, 245); 
-    width: 30%;
-    height: 500px;
-    padding: 10px;
-    margin: 15px;
+
+}
+
+.itemCard{
+    width: 300px;
+    height: 400px;
     border: 1px solid rgb(235, 152, 243);
-    border-radius: 12px;
-    word-wrap: break-word;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 10px;
+    margin: 30px 20px;
+    background-color: plum;
+
+
 }
 
 
-.prod-img{
+.prodImg{
+    margin-bottom: 5px;
     height:35%;
     width: 100%;
    
 }
 
 
-.prod-img>img {
+.prodImg>img {
     flex-shrink: 1;
     width: 12vw;
     height: 12vw;
@@ -28,10 +35,19 @@
     border-radius: 50%;    
 }
 
-.item-info{
-    height: 35%;
+.itemInfo{
+    margin-top: 60px;
+    align-items: center;
+}
+.contenedorCount{
+
+    display:flex;
+    width: 100px;
+    justify-content: space-between;
+    height: 40px;
+    align-items: center;
+    padding-left: 100px;
+    
 }
 
-.botones-lista{
-    height: 30%
-}
+
