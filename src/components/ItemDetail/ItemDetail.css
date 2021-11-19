@@ -1,13 +1,14 @@
-
-
 .prodImg{
     margin-bottom: 5px;
+    display: flex;
+
 }
 
 .prodImg>img {
-    flex-shrink: 1;
+    display: flex;
     width: 150px;
     margin-top: 10px;
+    margin-left: 150px;
     border-color: rgb(235, 152, 243);
     border-style: solid;
     border-radius: 50%;    
@@ -17,15 +18,6 @@
     margin-top: 60px;
     align-items: center;
 }
-.contenedorCount{
-    margin-left:36%;
-    display:flex;
-    width: 100%px;
-    justify-content: space-between;
-    height: 40px;
-    align-items: center;
-    padding-left: 100px;
-    
-}
+
 
 

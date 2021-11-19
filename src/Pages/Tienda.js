@@ -7,7 +7,7 @@ export default function Tienda (){
    // const {category} = useParams()
     //console.log("parametros:",useParams())
     return(
-        <div>
+        <div >
         <ItemListContainer/>
         </div>
     );

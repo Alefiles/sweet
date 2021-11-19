@@ -33,7 +33,7 @@ useEffect (() => {
     getItems(db) 
 },[categoryId])
 return (
-    <div className={"container-general"}>
+    <div className="containerGeneral">
     
     {console.log("lista de prod: ", items)}
                     {items.length !==0 ?(

@@ -33,20 +33,19 @@ const delItem = () => {
 }
 
     return(
-        <div className="containerProd">
-            <div className ="itemCard">
+        <div className="product">
+            <div className ="card">
                 <div className="prodImg">
-                    <img src= {picture} alt="imagen del prod"/>
+                    <img  src= {picture} alt="imagen del prod"/>
                 </div>
-                <div className="itemInfo">
+                <div className="infoProd">
                     <h3> {flavor}</h3>
-                    <p>${price}</p>
-
-                    <Link to={`/DetalleProd/${Id}`}><Button>Más info</Button></Link>
-
-                    <ItemCount onAdd={onAdd} delItem={delItem} stock={stock} quantity={items} buy={buy}/>
-
+                    <span>${price}</span>
+                <div className="cardCounter">
+                <ItemCount onAdd={onAdd} delItem={delItem} stock={stock} quantity={items} buy={buy}/>
+                </div>   
                     <Button onClick ={() => buy ()} >Comprar</Button>
+                    <Link to={`/DetalleProd/${Id}`}><Button>Más info</Button></Link>
                 </div>  
             </div>
         </div>
